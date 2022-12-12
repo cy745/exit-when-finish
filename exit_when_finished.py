@@ -1,7 +1,6 @@
 import modules.scripts as scripts
 import gradio as gr
 import os
-import sys
 
 from modules import images
 from modules.processing import process_images, Processed
@@ -44,6 +43,6 @@ class Script(scripts.Script):
 
         if enable:
             print("[Exit when done]try exit.\n")
-            sys.exit(0)
+            os._exit()
 
         return proc
