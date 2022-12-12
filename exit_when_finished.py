@@ -43,6 +43,6 @@ class Script(scripts.Script):
 
         if enable:
             print("[Exit when done]try exit.\n")
-            os._exit()
+            os._exit(0)
 
         return proc
