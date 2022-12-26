@@ -12,8 +12,6 @@ from modules.processing import process_images, Processed, StableDiffusionProcess
 from modules.shared import opts, cmd_opts, state
 
 
-
-
 class Script(scripts.Script):  
 
     # The title of the script. This is what will be displayed in the dropdown menu.
@@ -35,12 +33,7 @@ class Script(scripts.Script):
         enable = gr.Checkbox(value=False, label="[Exit-When-Finished] Enable exit function when process is finished.")
         random_prompt_enable = gr.Checkbox(value=False, label="[Random-Prompt] Enable random prompt script function.")
         use_same_seed = gr.Checkbox(value=False, label="[Random-Prompt] Use same seed to generate.")
-        return [enable, random_prompt_enable, use_same_seed]
-  
-
-    def random_prompt_run(self, p, sameseed):
-        
-
+        return [enable, random_prompt_enable, use_same_seed]        
 
     def run(self, p, enable, random_prompt_enable, use_same_seed):
         if enable:
