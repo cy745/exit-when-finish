@@ -110,7 +110,7 @@ class Script(scripts.Script):
 
 
             p.prompt = all_prompts * p.n_iter #all_prompts * p.n_iter
-            if sameseed == True:
+            if use_same_seed == True:
                 p.seed =[item for item in range(int(p.seed), int(p.seed) + p.n_iter) for _ in range(len(all_prompts))]
             #print(f"p.n_iter：{p.n_iter}") #=batch_count
             p.do_not_save_grid = True
